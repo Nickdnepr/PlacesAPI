@@ -1,0 +1,10 @@
+version: '2.1'
+services:
+  places_api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        M2_HOME: "/home/places-api/.m2"
+    ports:
+      - 8080:8080
