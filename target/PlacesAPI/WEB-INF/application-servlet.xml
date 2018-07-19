@@ -5,5 +5,31 @@
        xmlns:mvc="http://www.springframework.org/schema/mvc"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
     <context:component-scan base-package="com.nickdnepr.places.api"/>
-    <mvc:annotation-driven />
+    <mvc:annotation-driven/>
+
+    <bean id="placesDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
+
+          destroy-method="close">
+
+        <property name="driverClass" value="org.postgresql.Driver"/>
+
+        <property name="jdbcUrl" value="jdbc:postgresql://localhost:5432/places"/>
+
+        <property name="user" value="postgres"/>
+
+        <property name="password" value="backenddeveloper"/>
+
+        <property name="maxPoolSize" value="50"/>
+
+        <property name="minPoolSize" value="10"/>
+
+        <property name="maxStatements" value="100"/>
+
+        <property name="testConnectionOnCheckout" value="true"/>
+    </bean>
+
+    <bean id="testDao" class="com.nickdnepr.places.api.dao.TestDao">
+        <property name="dataSource" ref="placesDataSource"/>
+    </bean>
+
 </beans>
