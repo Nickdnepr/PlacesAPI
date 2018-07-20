@@ -1,11 +1,12 @@
 package com.nickdnepr.places.api;
 //Дотянуться до тебя
 
-import com.nickdnepr.places.api.database.dao.TestDao;
 import com.nickdnepr.places.api.models.ActivityCategory;
 import com.nickdnepr.places.api.models.ActivityType;
 import com.nickdnepr.places.api.services.TestService;
+import com.nickdnepr.places.api.services.TypesService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,15 +17,18 @@ import java.util.List;
 public class PlacesRestController {
 
     @Autowired
-    TestService testDao;
+    public TestService testService;
+
+    @Autowired
+    public TypesService typesService;
 
     @RequestMapping(value = "/helloWorld")
     public String helloWorld() {
         return "Hello world";
     }
 
-    @RequestMapping(value =  "/getCategories")
-    public List<ActivityCategory> getCategories(){
+    @RequestMapping(value = "/getCategories")
+    public List<ActivityCategory> getCategories() {
         List<ActivityCategory> categories = new ArrayList<>();
 
         List<ActivityType> types = new ArrayList<>();
@@ -41,15 +45,19 @@ public class PlacesRestController {
         return categories;
     }
 
-    @RequestMapping(value =  "/getTypes")
-    public List<ActivityType> getTypes(){
+    @RequestMapping(value = "/getAllTypes")
+    public List<ActivityType> getAllTypes() {
+        return typesService.getAllTypes();
+    }
 
-        return testDao.getTypes();
-//        List<ActivityType> types = new ArrayList<>();
-//        types.add(new ActivityType(0, "PaintBall"));
-//        types.add(new ActivityType(1, "StrikeBall"));
-//        types.add(new ActivityType(2, "VrCube"));
-//        return types;
+    @RequestMapping(value = "/getTypesFromCategory/{categoryId}")
+    public List<ActivityType> getTypesFromCategory(@PathVariable int categoryId) {
+        return typesService.getTypesFromCategory(categoryId);
+    }
+
+    @RequestMapping(value = "/getTypesByString/{pattern}")
+    public List<ActivityType> getTypesByString(@PathVariable String pattern){
+        return typesService.getTypesByString(pattern);
     }
 
 }

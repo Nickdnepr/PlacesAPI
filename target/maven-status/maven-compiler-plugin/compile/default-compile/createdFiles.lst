@@ -1,5 +1,8 @@
-com/nickdnepr/places/api/mappers/TypesMapper.class
-com/nickdnepr/places/api/PlacesRestController.class
+com/nickdnepr/places/api/services/TestService.class
 com/nickdnepr/places/api/models/ActivityType.class
-com/nickdnepr/places/api/dao/TestDao.class
+com/nickdnepr/places/api/database/dao/TypesDao.class
+com/nickdnepr/places/api/services/TypesService.class
+com/nickdnepr/places/api/PlacesRestController.class
+com/nickdnepr/places/api/database/mappers/TypesMapper.class
+com/nickdnepr/places/api/database/dao/TestDao.class
 com/nickdnepr/places/api/models/ActivityCategory.class

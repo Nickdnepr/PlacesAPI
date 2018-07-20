@@ -32,4 +32,8 @@
         <property name="dataSource" ref="placesDataSource"/>
     </bean>
 
+    <bean id="typesDao" class="com.nickdnepr.places.api.database.dao.TypesDao">
+        <property name="dataSource" ref="placesDataSource"/>
+    </bean>
+
 </beans>
