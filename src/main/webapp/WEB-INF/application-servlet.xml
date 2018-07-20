@@ -28,7 +28,7 @@
         <property name="testConnectionOnCheckout" value="true"/>
     </bean>
 
-    <bean id="testDao" class="com.nickdnepr.places.api.dao.TestDao">
+    <bean id="testDao" class="com.nickdnepr.places.api.database.dao.TestDao">
         <property name="dataSource" ref="placesDataSource"/>
     </bean>
 

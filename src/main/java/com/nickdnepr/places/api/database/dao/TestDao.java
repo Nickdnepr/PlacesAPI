@@ -1,6 +1,6 @@
-package com.nickdnepr.places.api.dao;
+package com.nickdnepr.places.api.database.dao;
 
-import com.nickdnepr.places.api.mappers.TypesMapper;
+import com.nickdnepr.places.api.database.mappers.TypesMapper;
 import com.nickdnepr.places.api.models.ActivityType;
 import org.springframework.jdbc.core.support.JdbcDaoSupport;
 

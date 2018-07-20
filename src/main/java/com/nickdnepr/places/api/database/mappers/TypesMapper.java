@@ -1,4 +1,4 @@
-package com.nickdnepr.places.api.mappers;
+package com.nickdnepr.places.api.database.mappers;
 
 import com.nickdnepr.places.api.models.ActivityType;
 import org.springframework.jdbc.core.RowMapper;
