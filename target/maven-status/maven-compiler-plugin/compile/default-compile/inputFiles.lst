@@ -1,8 +1,0 @@
-/home/nick/java/PlacesAPI/src/main/java/com/nickdnepr/places/api/PlacesRestController.java
-/home/nick/java/PlacesAPI/src/main/java/com/nickdnepr/places/api/services/TestService.java
-/home/nick/java/PlacesAPI/src/main/java/com/nickdnepr/places/api/models/ActivityType.java
-/home/nick/java/PlacesAPI/src/main/java/com/nickdnepr/places/api/models/ActivityCategory.java
-/home/nick/java/PlacesAPI/src/main/java/com/nickdnepr/places/api/database/dao/TestDao.java
-/home/nick/java/PlacesAPI/src/main/java/com/nickdnepr/places/api/services/TypesService.java
-/home/nick/java/PlacesAPI/src/main/java/com/nickdnepr/places/api/database/dao/TypesDao.java
-/home/nick/java/PlacesAPI/src/main/java/com/nickdnepr/places/api/database/mappers/TypesMapper.java
